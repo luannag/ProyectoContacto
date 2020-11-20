@@ -165,7 +165,7 @@
 	</script>
 
 	
-		<script type="text/javascript">
+			<script type="text/javascript">
 
 		
 		function sendEmail() {
@@ -178,11 +178,11 @@
                 SecureToken: "6cb0bd30-9e90-40d6-8fc7-049118830d3f",
                 From: correo,
                 To: "luanna.gonzart@gmail.com",
-                Subject: nombre,
-                Body:  "Curso: " + curso + "<br>" + "Empresa: "  + empresa + "<br>" + "Mensaje: " + mensaje 
+                Subject: "BeGurus",
+                Body: "De: " + nombre + "<br>" + "Curso: " + curso + "<br>" + "Empresa: "  + empresa + "<br>" + "Mensaje: " + mensaje 
             })
         .then(function (message) {
-                    alert("Mensaje enviado con éxito, pronto le contestaremos")
+                    alert("Mensaje éxitoso, pronto estaremos en contacto")
                 });
         }
 			
