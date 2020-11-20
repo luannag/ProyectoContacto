@@ -5,7 +5,7 @@
 	<meta name="description" content="Página Contacto - Academia"/>
 	<meta name="keywords" content="HTML, CSS, XML, XHTML, JavaScript"/>
 	<meta name="author" content="Luanna González"/>
-	<link rel="stylesheet" href="styleContacto.css">
+	<link rel="stylesheet" href="css/styleContacto.css">
 	<title>BeGurus</title>
 	
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
@@ -28,7 +28,7 @@
 	<header>
 	<div class="cabecera">
 		
-		 <center><img src="B.JPG" alt="Logo"/> </center>
+		 <center><img src="img/B.JPG" alt="Logo"/> </center>
 	
 		 <nav class="navbar navbar-expand-md navbar-dark bg-dark" >
        
@@ -77,11 +77,11 @@
        	<form  method="post" class="form_contact" >
 		
          <div class="form-group">
-         	<label>Nombre</label>
+         	<label>Nombre completo</label>
          	<input type="text" id="nombre" name="nombre" required class="form-control" >
          </div>
 		 
-		 <p>Género:
+		 <p>Género
 			<input type="radio" name="hm" value="h" required> Hombre
 			<input type="radio" name="hm" value="m" required> Mujer
 		</p>
@@ -99,6 +99,10 @@
 				<input id="correo" required  class="form-control">
 				<span id="emailOK"></span>
 			</p> 
+         </div>
+		  <div class="form-group">
+         	<label>Nombre de la empresa</label>
+         	<input type="text" id="empresa" name="empresa" required class="form-control" >
          </div>
 		 
 		  <div class="form-group">
@@ -140,7 +144,7 @@
 	</div>
 		</footer>
 	
-		 <script src="ArchivoJS.js" ></script>
+		 <script src="js/ArchivoJS.js" ></script>
 		 
 	
 		
@@ -152,16 +156,15 @@
 			
 		emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 		if (emailRegex.test(campo.value)) {
-					valido.innerText = "válido";
+					valido.innerText = "correo válido";
 		} else {
-					valido.innerText = "incorrecto";
+					valido.innerText = "correo incorrecto";
 		}
 	});
 
 	</script>
 
 	
-		
 		<script type="text/javascript">
 
 		
@@ -184,5 +187,6 @@
         }
 			
 	</script>
+	
 </body>
 </html>
