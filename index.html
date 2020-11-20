@@ -161,6 +161,7 @@
 	</script>
 
 	
+		
 		<script type="text/javascript">
 
 		
@@ -168,13 +169,14 @@
 			var correo = document.getElementById('correo').value
 			var mensaje = document.getElementById('mensaje').value
 			var nombre = document.getElementById('nombre').value
+			var empresa = document.getElementById('empresa').value
 			var curso = document.getElementById('curso').value
             Email.send({
                 SecureToken: "6cb0bd30-9e90-40d6-8fc7-049118830d3f",
                 From: correo,
                 To: "luanna.gonzart@gmail.com",
                 Subject: nombre,
-                Body:  curso + "<br>" + mensaje 
+                Body:  "Curso: " + curso + "<br>" + "Empresa: "  + empresa + "<br>" + "Mensaje: " + mensaje 
             })
         .then(function (message) {
                     alert("Mensaje enviado con éxito, pronto le contestaremos")
@@ -182,6 +184,5 @@
         }
 			
 	</script>
-	
 </body>
 </html>
