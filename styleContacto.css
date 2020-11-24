@@ -8,22 +8,12 @@ body{
 	
 }
 
-
-img{
-width: 20%;
-margin: 10px 0 10px 0; 
-float: center;
-}
-
-
-
 .cabecera{
 	background-color: #E63C2F;
 	width:100%;
 }
 
 .cabecera img{
-width: 20%;
 margin: 10px 0 10px 0; 
 float: center;
 }
