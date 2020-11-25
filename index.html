@@ -77,10 +77,15 @@
          	<label>Nombre completo</label>
          	<input type="text" id="nombre" name="nombre" required class="form-control" >
          </div>
-		 
-		 <p>Género
-			<input type="radio" name="hm" value="h" required> Hombre
-			<input type="radio" name="hm" value="m" required> Mujer
+	
+	 <div class="form-group">
+         	<label>Apellidos </label>
+         	<input type="text" id="apellido" name="apellido" required class="form-control" >
+         </div>
+		
+		  <p>Seleccione su género
+			<input type="radio" name="hm" value="h" required> Masculino
+			<input type="radio" name="hm" value="m" required> Femenino
 		</p>
 		
 		  <div class="form-group">
@@ -151,9 +156,9 @@
 			
 		emailRegex = /^[-\w.%+]{1,64}@(?:[A-Z0-9-]{1,63}\.){1,125}[A-Z]{2,63}$/i;
 		if (emailRegex.test(campo.value)) {
-					valido.innerText = "correo válido";
+					valido.innerText = "Válido";
 		} else {
-					valido.innerText = "correo incorrecto";
+					valido.innerText = "Inválido";
 		}
 	});
 
@@ -167,6 +172,7 @@
 			var correo = document.getElementById('correo').value
 			var mensaje = document.getElementById('mensaje').value
 			var nombre = document.getElementById('nombre').value
+			var apellido = document.getElementById('apellido').value
 			var empresa = document.getElementById('empresa').value
 			var curso = document.getElementById('curso').value
             Email.send({
@@ -174,7 +180,7 @@
                 From: correo,
                 To: "luanna.gonzart@gmail.com",
                 Subject: "BeGurus",
-                Body: "De: " + nombre + "<br>" + "Curso: " + curso + "<br>" + "Empresa: "  + empresa + "<br>" + "Mensaje: " + mensaje 
+                Body: "De: " + nombre + " " + apellido + "<br>" + "Curso: " + curso + "<br>" + "Empresa: "  + empresa + "<br>" + "Mensaje: " + mensaje 
             })
         .then(function (message) {
                     alert("Mensaje éxitoso, pronto estaremos en contacto")
