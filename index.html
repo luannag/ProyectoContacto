@@ -86,8 +86,6 @@
 		  <div class="form-group">
 				<label>Fecha de Nacimiento</label>
 				<input type='date' id='miEdad'  name="fecha" required  class="form-control" >
-				<br>
-				<center><a onclick="Edad();" class="btn btn-light" >Calcular edad</a><center>
 				<p id= "Edadcalculada">  </p>
          </div>
 		 
@@ -119,7 +117,7 @@
          </div>
 		 
          <div class="form-group">
-         	 <center> <a   onclick="sendEmail();" class="btn btn-light">Enviar</a></center>
+         	 <center> <a   onclick="sendEmail();Edad();" class="btn btn-light">Enviar</a></center>
          </div>
 		</form>
        </div>
