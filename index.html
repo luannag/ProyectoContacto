@@ -63,7 +63,7 @@
 
 	<div class="row">
 	
-        <div class="col-md-6">
+       <div class="col-md-6">
 			<p>Correo electrónico
 			<br>
 			info@begurus.org </p>
@@ -92,8 +92,8 @@
          </div>
 		 
 		 <p>Seleccione su género
-			<input type="radio" name="hm" value="h" required> Masculino
-			<input type="radio" name="hm" value="m" required> Femenino
+			<input type="radio" id="hm" name="hm" value="h" required> Masculino
+			<input type="radio" id="hm" name="hm" value="m" required> Femenino
 		</p>
 		
 		  <div class="form-group">
@@ -130,7 +130,7 @@
          </div>
 		 
          <div class="form-group">
-         		 <center> <a   onclick="sendEmail();Edad();" class="btn btn-light" >Enviar</a> <input type="reset" value="Restaurar"class="btn btn-light"></center> 
+         	 <center> <a  id="aa" onclick="Edad();" class="btn btn-light" >Enviar</a></center> 
          </div>
 		</form>
        </div>
@@ -172,12 +172,22 @@
 
 	</script>
 
-	
-		<script type="text/javascript">
 
-		
-		function sendEmail() {
-			var correo = document.getElementById('correo').value
+	
+	<script> 
+	$(function(){
+	var name, lastname, company, message, email, course, gender;
+	$("#aa").on('click', function(){
+	name = $("#nombre").val();
+	lastname = $("#apellido").val();
+	company = $("#empresa").val();
+	messagee = $("#mensaje").val();
+	email = $("#correo").val();
+	if(name.length==0 || lastname.length==0 || company.length==0  || messagee.length==0 || email.length==0){
+	alert("Verifique que no haya dejado algún campo sin completar, de ser así por favor completarlo.");
+	}
+	else{
+		var correo = document.getElementById('correo').value
 			var mensaje = document.getElementById('mensaje').value
 			var nombre = document.getElementById('nombre').value
 			var apellido = document.getElementById('apellido').value
@@ -193,9 +203,21 @@
         .then(function (message) {
                     alert("Mensaje éxitoso, pronto estaremos en contacto")
                 });
-        }
-			
-	</script>
+			document.getElementById('nombre').value=''; 
+            document.getElementById('correo').value=''; 
+			document.getElementById('mensaje').value='';
+			document.getElementById('apellido').value='';
+			document.getElementById('empresa').value='';
+			document.getElementById('curso').value='';
+			document.getElementById('miEdad').value='';
+			document.getElementById('hm').value='';
 	
+	
+	}
+	});
+	});
+	</script> 
+
+ 
 </body>
 </html>
